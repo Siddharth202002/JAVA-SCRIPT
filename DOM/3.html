@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM 3</title>
+  </head>
+  <body>
+    <!-- events  -->
+    <p id="hellow"></p>
+    <button onclick="hey()" class="but">Submit</button>
+    <script>
+      /* document.addEventListener("dblclick",hellow)
+        function hellow(){
+           let a= document.getElementById("hellow")
+           a.style.fontSize="2rem"
+           a.style.color="red"
+           a.innerText="hellow */
+
+      function hey() {
+        let c=document.querySelector(".but")
+
+        
+
+        c.style.padding = "10px";
+        c.innerText = "log out";
+        c.style.color = "blue";
+        c.style.fontSize="25px"
+      }
+    </script>
+  </body>
+</html>

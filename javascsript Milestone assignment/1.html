@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Validator</title>
+  </head>
+  <body>
+    <fieldset>
+      <legend>Passowrd validator!</legend>
+      <form action="">
+        <label for="password">Enter password:</label>
+        <input type="text" id="password" />
+        <br />
+        <label for="confirmPassword">Confirm password:</label>
+        <input type="text" id="confirmPassword" />
+        <br />
+        <button onclick="check()">submit</button>
+      </form>
+    </fieldset>
+    <p id="ans"></p>
+    <script>
+      let pass = document.querySelector("#password");
+
+      let confirmPass = document.querySelector("#confirmPassword");
+      let ans = document.querySelector("#ans");
+
+      function check() {
+        let val1 = pass.value;
+        let val2 = confirmPass.value;
+
+        let ans = val1.localeCompare(val2);
+
+        if (ans == 0) {
+          ans.textContent = "password matched";
+
+          alert("password matched");
+        } else {
+          alert("password Unmatched");
+        }
+      }
+    </script>
+  </body>
+</html>

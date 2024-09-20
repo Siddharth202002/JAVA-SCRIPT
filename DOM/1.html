@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+  </head>
+  <body>
+    <!-- by id -->
+
+    <!-- <p  id="para">
+        <span>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, temporibus.
+        </span>
+        
+    </p> -->
+
+    <!-- by class -->
+    <!-- <ul>
+        <li class="tech">one</li>
+        <li class="tech">two</li>
+        <li class="tech">three</li>
+     </ul> -->
+
+    <!-- tag name -->
+    <!-- <h4>hey</h4>
+      <h4>namaste</h4>
+      <h4>hola</h4> -->
+    <h2 class="h1">h1</h2>
+    <h2 id="h2">h2</h2>
+    <h1>h3</h1>
+
+    <script>
+      // id name
+      /*let var1= document.getElementById("para")
+       console.log(var1)
+       let var2=var1.innerHTML
+       console.log(var2)*/
+      //class name
+
+      /* let var1=document.getElementsByClassName("tech")
+       let var2=var1[0].innerText
+       let var3=var1[1].innerText
+       
+
+       console.log(var2)
+       console.log(var3)*/
+
+      //tag name
+
+      /*let var1=document.getElementsByTagName("h4")
+       console.log(var1)
+       var1[1].innerText="siddhart"
+       var1[1].style.color="blue"*/
+
+      //Query selector
+      let var1 =document.querySelector("h1");
+     // var1.className="hola"
+     //var1.classList="hola hellow"
+     var1.setAttribute("class","hellow")
+     var1.setAttribute("title","text")
+      console.log(var1);
+    </script>
+  </body>
+</html>

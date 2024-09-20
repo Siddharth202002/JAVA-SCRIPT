@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mouse Over</title>
+  </head>
+  <body>
+    <button id="btn">SHOP NOW</button>
+    <script>
+      let btn = document.querySelector("#btn");
+      btn.addEventListener("mouseover", () => {
+        btn.textContent = "Thanku For Shopping";
+        btn.style.color="purple"
+
+        setTimeout(()=>{
+            btn.textContent="SHOP NOW"
+            btn.style.color=""
+
+        },1000)
+      });
+    </script>
+  </body>
+</html>

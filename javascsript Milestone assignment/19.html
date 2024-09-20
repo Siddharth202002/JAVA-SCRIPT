@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Form</title>
+    <style>
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+      div {
+        display: inline;
+      }
+      fieldset {
+        padding: 20px;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <fieldset>
+        <legend>User Detail Form!</legend>
+        <form>
+          <label for="userEmail"> USER EMAIL: </label>
+          <input required type="text" id="userEmail" />
+          <br />
+          <label for="userPassword"> USER PASSWORD </label>
+          <input type="password" name="" id="userPassword" />
+          <br />
+          <button type="submit" id="but">SUBMIT</button>
+        </form>
+      </fieldset>
+    </div>
+    <p id="para"></p>
+
+    <script>
+      const emailEl = document.querySelector("#userEmail");
+      const passwordEl = document.querySelector("#userPassword");
+      const buttonEl = document.querySelector("#but");
+      const p = document.querySelector("#para");
+
+      function check(e) {
+        e.preventDefault();
+
+        const email = emailEl.value;
+        const password = passwordEl.value;
+
+        let emailflag = false;
+
+        for (let i = 0; i < email.length; i++) {
+          if (email[i] === "@") {
+            emailflag = true;
+            break;
+          }
+        }
+
+        if (!emailflag) {
+          p.style.color = "red";
+          p.textContent = "@ is not present";
+          return;
+        }
+
+        if (password.length < 8) {
+          p.style.color = "red";
+          p.textContent = "minimum length is 8";
+          return;
+        }
+
+        p.style.color = "green";
+        p.textContent = "Valid email and password!";
+      }
+
+      buttonEl.addEventListener("click", check);
+      // console.log(p.innerHTML);
+    </script>
+  </body>
+</html>

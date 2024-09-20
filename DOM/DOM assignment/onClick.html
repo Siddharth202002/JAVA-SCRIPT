@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onclick</title>
+</head>
+<body>
+    <button id="but">
+        LOGIN
+    </button>
+
+    <script>
+        let button=document.querySelector("#but")
+        button.addEventListener("click",()=>{
+            button.innerHTML="LOGOUT"
+            button.style.color="grey"
+        })
+    </script>
+    
+</body>
+</html>

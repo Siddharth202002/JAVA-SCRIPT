@@ -1,0 +1,28 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  transition: background-color 500ms ease-in-out;
+}
+
+button {
+  padding: 30px;
+  background-color: #0000ff;
+  color: #00ffff;
+  font-size: 2rem;
+  border-radius: 100px;
+  border: none;
+  transform: scale(1.0);
+  transition: all 100ms ease-in;
+  cursor: pointer;
+}
+
+button:active{
+  transform: scale(0.9);
+}
+
+button:hover {
+  color: #0000ff;
+  background-color: black;
+}

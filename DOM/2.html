@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM 2</title>
+  </head>
+  <body>
+    <ul>
+      <li>one</li>
+      <li>two</li>
+      <li>three</li>
+      <li>four</li>
+    </ul>
+
+    <script>
+      // append child
+      let var1 = document.createElement("h1");
+      var1.className = "hellow";
+      var1.style.fontSize = "25px";
+      var1.style.color = "red";
+      var1.textContent = "My name is siddharth";
+      console.log(var1);
+      document.body.appendChild(var1);
+
+      // removing an element
+      let ul = document.querySelector("ul");
+      console.log(ul);
+      let lists = document.querySelectorAll("li");
+      console.log(lists);
+      for (list of lists) {
+        ul.removeChild(list);
+      }
+    </script>
+  </body>
+</html>
